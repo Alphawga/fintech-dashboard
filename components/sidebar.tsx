@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { BarChart3, Compass, Heart, LineChart, PieChart, TrendingUp, Wrench } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "./theme-toggle"
 
 const navigation = [
   { name: "Explore", href: "/", icon: Compass, current: true },
@@ -26,8 +27,8 @@ export function Sidebar() {
           <span className="text-xl font-bold">Fobework</span>
         </Link>
       </div>
-      <div className="flex flex-1 flex-col overflow-y-auto py-4">
-        <nav className="flex-1 space-y-1 px-4">
+      <div className="flex flex-1 flex-col overflow-y-auto">
+        <nav className="flex-1 space-y-1 px-4 py-4">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -50,6 +51,9 @@ export function Sidebar() {
             </Link>
           ))}
         </nav>
+        <div className="border-t border-border p-4">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   )

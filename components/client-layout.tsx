@@ -19,10 +19,10 @@ export default function ClientLayout({
       {!isMobile ? (
         <Sidebar />
       ) : (
-        <MobileNav open={sidebarOpen} onOpenChange={setSidebarOpen} />
+        <MobileNav isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       )}
       <div className="flex flex-1 flex-col">
-        <Header />
+        <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         <main className="flex-1 overflow-y-auto">{children}</main>
       </div>
     </div>

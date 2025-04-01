@@ -7,6 +7,7 @@ import { Bell, HelpCircle, Menu, Search, Settings, Upload } from "lucide-react"
 import { useMobile } from "@/hooks/use-mobile"
 import { useState } from "react"
 import { MobileNav } from "@/components/mobile-nav"
+import { ThemeToggle } from "./theme-toggle"
 
 interface HeaderProps {
   onMenuClick: () => void
@@ -18,6 +19,7 @@ export function Header({ onMenuClick }: HeaderProps) {
 
   return (
     <>
+
       <header className="flex h-14 md:h-16 shrink-0 items-center gap-2 border-b border-border bg-background px-3 md:gap-4 md:px-6  ">
 
         {isMobile && (
