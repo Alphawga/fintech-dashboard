@@ -15,25 +15,38 @@ interface MobileNavProps {
 
 const menuItems = [
   {
-    title: "Dashboard",
-    href: "/dashboard",
+    title: "Explore",
+    href: "/",
   },
   {
-    title: "Portfolio",
-    href: "/portfolio",
+    title: "Stocks",
+    href: "/stocks",
+  },
+  {
+    title: "F&O",
+    href: "/fno",
+  },
+  {
+    title: "Mutual Funds",
+    href: "/mutual-funds",
   },
   {
     title: "Watchlist",
     href: "/watchlist",
   },
   {
-    title: "Transactions",
-    href: "/transactions",
+    title: "Investments",
+    href: "/investments",
   },
   {
-    title: "Settings",
-    href: "/settings",
+    title: "Markets",
+    href: "/markets",
   },
+  {
+    title: "Tools",
+    href: "/tools",
+  },
+  
 ]
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
